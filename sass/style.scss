@@ -19,9 +19,9 @@ body {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     color: #1f4040;
-    >hr{
-        border: 2px solid rgba(0,0,0,.1);
-        margin:50px 0;
+    > hr {
+        border: 2px solid rgba(0, 0, 0, .1);
+        margin: 50px 0;
     }
 }
 
@@ -100,7 +100,7 @@ header {
 
 //Showcase
 .showcase {
-    .container{
+    .container {
         padding: 0;
     }
     .row {
@@ -136,4 +136,80 @@ header {
 }
 
 //Secondary content
+.sec-content {
+    .row {
+        margin: 60px 0;
+        .col-xs-6 {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            p {
+                margin: 0 10px;
+                font-weight: bolder;
+                text-transform: uppercase;
+            }
+        }
+    }
 
+    form {
+        background: #e6e6e6;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0 3px 15px silver;
+        overflow: auto;
+        h2,
+        span {
+            text-align: center;
+        }
+        input,
+        label {
+            display: block;
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+        span {
+            font-size: 12px;
+            font-weight: bolder;
+            display: block;
+            margin-top: -5px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            padding: 12px 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            border: none;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            float: right;
+            margin-top: 30px;
+            font-size: 20px;
+            color: $secundary-color;
+            background: #1f4040;
+            border: none;
+            border-radius: 4px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+
+
+
+    }
+
+
+}
