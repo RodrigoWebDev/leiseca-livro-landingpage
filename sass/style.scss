@@ -1,4 +1,14 @@
-//GENERAL
+//Variables and Mixins
+$text-white: white;
+$text-color: #1f4040;
+$secundary-color: #d8b56a;
+
+@mixin img-fluid() {
+    width: 100%;
+    height: auto;
+}
+
+//General
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +18,11 @@
 body {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
+    color: #1f4040;
+    >hr{
+        border: 2px solid rgba(0,0,0,.1);
+        margin:50px 0;
+    }
 }
 
 ul,
@@ -21,16 +36,11 @@ a:hover {
     text-decoration: none;
 }
 
-//Variables and Mixins
-$text-white: white;
-$secundary-color: #d8b56a;
-
-@mixin img-fluid() {
-    width: 100%;
-    height: auto;
+//Classes
+.container {
+    padding: 0 40px;
 }
 
-//Classes
 .button {
     padding: 10px;
     border: 1px solid white;
@@ -42,6 +52,12 @@ $secundary-color: #d8b56a;
 .button:hover {
     background: $secundary-color;
     color: black;
+}
+
+.hr {
+    border: 2px solid $secundary-color;
+    width: 120px;
+    margin: 10px 0;
 }
 
 //Hover animation
@@ -64,12 +80,12 @@ $secundary-color: #d8b56a;
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
-//HEADER
+//Header
 header {
     background: url(../img/img.jpg);
     background-size: cover;
     color: #c2d0da;
-    padding: 70px 40px;
+    padding: 70px 0;
     h1 {
         font-size: 80px;
         text-transform: uppercase;
@@ -80,18 +96,15 @@ header {
         color: $secundary-color;
     }
 
-    hr {
-        border: 2px solid $secundary-color;
-        width: 120px;
-        margin: 10px 0;
-    }
-
 }
 
-//SHOWCASE
+//Showcase
 .showcase {
-    .row{
-        margin:0;
+    .container{
+        padding: 0;
+    }
+    .row {
+        margin: 0;
     }
     .col-xs-6 {
         padding: 0;
@@ -101,3 +114,26 @@ header {
     }
 
 }
+
+//Main content
+.main-content {
+    img {
+        @include img-fluid();
+    }
+    h2 {
+        font-size: 50px;
+    }
+    hr {
+        border: 4px solid $secundary-color;
+        width: 150px;
+        margin-top: -5px;
+        margin-bottom: 30px;
+    }
+    p {
+        color: $secundary-color;
+        font-size: 20px;
+    }
+}
+
+//Secondary content
+
