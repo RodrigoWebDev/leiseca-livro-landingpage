@@ -1,3 +1,4 @@
+
 //Variables and Mixins
 $text-white: white;
 $text-color: #1f4040;
@@ -12,7 +13,8 @@ $secundary-color: #d8b56a;
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -66,18 +68,22 @@ a:hover {
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+       transition-duration: 0.5s;
 }
 
 .hvr-bounce-in:hover,
 .hvr-bounce-in:focus,
 .hvr-bounce-in:active {
     -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+        transform: scale(1.2);
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    -o-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+       transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 //Header
@@ -141,8 +147,12 @@ header {
         margin: 60px 0;
         .col-xs-6 {
             padding: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             img {
                 width: 40px;
                 height: 40px;
@@ -160,7 +170,8 @@ header {
         padding: 30px;
         margin-bottom: 40px;
         border-radius: 4px;
-        box-shadow: 0 3px 15px silver;
+        -webkit-box-shadow: 0 3px 15px silver;
+                box-shadow: 0 3px 15px silver;
         overflow: auto;
         h2,
         span {
