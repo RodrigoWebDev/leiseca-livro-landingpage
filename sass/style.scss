@@ -14,6 +14,12 @@ $secundary-color: #d8b56a;
 }
 
 //General
+
+@font-face{
+    font-family: bebas;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,9 +28,10 @@ $secundary-color: #d8b56a;
 }
 
 body {
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: bebas, "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     color: #1f4040;
+    letter-spacing: .5px
     > hr {
         border: 2px solid rgba(0, 0, 0, .1);
     }
